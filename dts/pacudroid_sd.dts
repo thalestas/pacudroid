@@ -1,0 +1,43 @@
+/ {
+	firmware {
+		android {
+			compatible = "android,firmware";
+			fstab {
+				compatible = "android,fstab";
+				system {
+					compatible = "android,system";
+					dev = "/dev/block/mmcblk0p2";
+					type = "ext4";
+					mnt_flags = "noatime,ro,errors=panic";
+					fsmgr_flags = "wait";
+				};
+
+				vendor {
+					compatible = "android,system";
+					dev = "/dev/block/mmcblk0p3";
+					type = "ext4";
+					mnt_flags = "noatime,ro,errors=panic";
+					fsmgr_flags = "wait";
+				};
+			};
+		};
+	};
+};
+
+&am33xx_pinmux {
+	uart4_pins: pinmux_uart4_pins {
+		pinctrl-single,pins = <
+			/* P9_11: gpmc_wait0.uart4_rxd_mux2 */
+			0x070 (PIN_INPUT_PULLUP | MUX_MODE6)
+			/* P9_13: gpmc_wpn.uart4_txd_mux2  */
+			0x074 (PIN_OUTPUT_PULLDOWN | MUX_MODE6)
+		>;
+	};
+};
+
+&uart4 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart4_pins>;
+
+	status = "okay";
+};
