@@ -23,7 +23,7 @@
 ifneq ($(filter pacudroid%, $(TARGET_DEVICE)),)
 
 #LOCAL_PATH := $(call my-dir)
-LOCAL_PATH := device/amlogic/yukawa
+YUKAWA_PATH := device/amlogic/yukawa
 
 $(eval $(call declare-1p-copy-files,device/amlogic/yukawa/binaries/bt-wifi-firmware,))
 $(eval $(call declare-1p-copy-files,device/amlogic/yukawa/binaries/video_firmware,))
@@ -38,5 +38,5 @@ $(eval $(call declare-1p-copy-files,device/amlogic/yukawa/,fstab.yukawa))
 # if some modules are built directly from this directory (not subdirectories),
 # their rules should be written here.
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
+include $(call all-makefiles-under,$(YUKAWA_PATH))
 endif
