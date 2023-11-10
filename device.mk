@@ -16,6 +16,9 @@
 
 PRODUCT_SOONG_NAMESPACES += device/pacu/pacudroid
 
+PRODUCT_SHIPPING_API_LEVEL := 31
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
 # KERNEL
 ifndef TARGET_KERNEL_USE
 TARGET_KERNEL_USE := 6.1
@@ -45,7 +48,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:vendor/etc/permissions/android.hardware.vulkan.compute.xml \
     frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:vendor/etc/permissions/android.hardware.vulkan.level.xml
 
-PRODUCT_PACKAGES +=  vulkan.yukawa.so
+PRODUCT_PACKAGES +=  vulkan.pacudroid.so
 
 # Video
 PRODUCT_COPY_FILES += \
