@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/full_pacudroid.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/pacudroid.mk
 
-COMMON_LUNCH_CHOICES := full_pacudroid-userdebug
+COMMON_LUNCH_CHOICES := pacudroid-userdebug

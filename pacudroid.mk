@@ -16,7 +16,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/pacu/pacudroid/device.mk)
 
-PRODUCT_NAME := full_pacudroid
+PRODUCT_NAME := pacudroid
 PRODUCT_DEVICE := pacudroid
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := pacudroid
