@@ -6,7 +6,7 @@ GPU_TARGET_PLATFORM ?= default_8a
 GPU_DRV_VERSION ?= r16p0
 LOCAL_ANDROID_VERSION_NUM := p-${GPU_DRV_VERSION}gralloc1
 
-LOCAL_MODULE := libGLES_mali
+LOCAL_MODULE := libGLES_mali_pacudroid
 LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
 LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_MULTILIB := both
