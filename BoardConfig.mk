@@ -116,7 +116,7 @@ ifeq ($(TARGET_USE_AB_SLOT), true)
 TARGET_RECOVERY_FSTAB := device/pacu/pacudroid/fstab.pacudroid
 else
 TARGET_RECOVERY_FSTAB := device/pacu/pacudroid/fstab.recovery.pacudroid
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 50331648
 endif
 endif
 
