@@ -39,7 +39,7 @@ LOCAL_DTB := $(BOARD_KERNEL_DTB)
 
 # Graphics
 GPU_TYPE := gondul_ion
-PRODUCT_PACKAGES +=  libGLES_mali_pacudroid
+PRODUCT_PACKAGES +=  libGLES_mali
 PRODUCT_PACKAGES +=  libGLES_android
 
 # Vulkan
